@@ -2,5 +2,12 @@
 
 require_once __DIR__ . '/../app/config/bootstrap.php';
 
-// Test ENV
-echo 'POSTGRES_HOST: ' . $_ENV['POSTGRES_HOST'] . '<br>';
+// Test DB Connection
+try {
+    $db = new Database();
+    print_r($db->fetchAll("SELECT kode_fakultas FROM program_studi"));
+    echo "Database connection successful!";
+} catch (Exception $e) {
+    echo "Database connection failed: " . $e->getMessage();
+    exit;
+}
