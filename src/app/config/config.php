@@ -9,6 +9,7 @@ define('BASE_URL', 'http://localhost:'. HTTP_PORT .'/');
 
 // Directory
 define('APP_DIR', __DIR__ . '/../');
+define('COMPONENTS_DIR', APP_DIR . 'components/');
 define('CONTROLLERS_DIR', APP_DIR . 'controllers/');
 define('MIDDLEWARES_DIR', APP_DIR . 'middlewares/');
 define('MODELS_DIR', APP_DIR . 'models/');

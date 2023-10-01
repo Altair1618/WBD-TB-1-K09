@@ -13,3 +13,11 @@ body {
 
   background: #F2F2F2;
 }
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
