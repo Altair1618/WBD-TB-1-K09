@@ -18,4 +18,9 @@ class AuthController {
         // TODO: Implement Sign Up process
         Router::getInstance()->redirect('/');
     }
+
+    public function signOut() {
+        // TODO: Delete User from Session or anything that implemented in signIn
+        Router::getInstance()->redirect('/signin');
+    }
 }
