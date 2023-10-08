@@ -82,8 +82,12 @@ $routes = [
         'GET' => ['route' => 'ProgramStudiController@getProgramStudi', 'middlewares' => []],
     ],
 
-    '/api/courses' => [
+    '/api/courses/student' => [
         'GET' => ['route' => 'CourseController@getCoursesHTML', 'middlewares' => []],
+    ],
+
+    '/api/courses/teacher' => [
+        'GET' => ['route' => 'CourseController@getCoursesTaughtHTML', 'middlewares' => []],
     ],
 
     '/api/catalog' => [

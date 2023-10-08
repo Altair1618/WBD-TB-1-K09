@@ -12,7 +12,7 @@ var footer = document.getElementById("body-footer");
 
 // URI Builder
 function buildCourseFetchURI(caller, value) {
-    let uri = "/api/courses?";
+    let uri = "/api/courses/student?";
 
     var search, fakultas, prodi, sort, order, page;
 
