@@ -15,9 +15,11 @@
     <li class="navbar-menu-item">
       <a class="navbar-menu-link" href="/courses">Mata Kuliah Saya</a>
     </li>
-    <li class="navbar-menu-item">
-      <a class="navbar-menu-link" href="/catalog">Katalog Mata Kuliah</a>
-    </li>
+    <?php if ($_SESSION['user']['tipe'] == PENGGUNA_TIPE_MAHASISWA): ?>
+      <li class="navbar-menu-item">
+        <a class="navbar-menu-link" href="/catalog">Katalog Mata Kuliah</a>
+      </li>
+    <?php endif; ?>
     <li class="navbar-menu-item">
       <a class="navbar-menu-link" href="/profile">Profil</a>
     </li>
