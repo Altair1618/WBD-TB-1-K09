@@ -18,6 +18,11 @@ class PageController {
 
             $controller = new CourseController();
             $controller->showMyCourses($params);
+        } else if ($_SESSION['user']['tipe'] == PENGGUNA_TIPE_PENGAJAR) {
+            require_once CONTROLLERS_DIR . 'CourseController.php';
+
+            $controller = new CourseController();
+            $controller->showCoursesTaught($params);
         } else {
             require_once CONTROLLERS_DIR . 'ErrorController.php';
 

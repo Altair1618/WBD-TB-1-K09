@@ -161,6 +161,21 @@ class MataKuliahRepository extends Model
     }
   }
 
+  function getEnrolledStudentCount(string $kode) {
+    try {
+      $query = "
+        SELECT 1
+        FROM pendaftaran_mata_kuliah
+        WHERE kode_mata_kuliah = $1
+      ";
+
+      return $this->db->rowCount($query, [$kode]) - 1;  // Note: -1 is because of the lecturer
+    } catch (Exception $e) {
+      Logger::error(__FILE__, __LINE__, "Failed to fetch `pendaftaran_mata_kuliah`: " . $e->getMessage());
+      throw $e;
+    }
+  }
+
   function insertMataKuliah(string $kode, string $nama, ?string $deskripsi, ?string $kode_program_studi)
   {
     try {
